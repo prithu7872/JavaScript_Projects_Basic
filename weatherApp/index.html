@@ -3,10 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=82cf2980-bde9-11ee-a7b1-95857434b872&callback=showPosition"></script>-->
     <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
   </head>
   <body>
+    <div class="container flex">
+      <div class="search flex">
+        <div class="search_bar">
+          <label for="search_place">
+            <input type="search" name="search_place" class="search_place" />
+          </label>
+        </div>
+        <div class="search_btn">
+          <button type="button">
+            <box-icon
+              name="search-alt-2"
+              style="height: 50%"
+              color="rgba(0,0,0,0.34)"
+            ></box-icon>
+          </button>
+        </div>
+      </div>
+      <button class="map_btn">
+        <box-icon name="map" color="rgba(0,0,0,0.34)"></box-icon>
+      </button>
+      <div class="map-box display_none">
+        <h4 class="location_details"></h4>
+        <div class="m_img">
+          <img class="map_img" style="width: 100%; height: 400px" alt="map" />
+        </div>
+      </div>
+      <div class="imgs">
+        <img src="/images/clear.png" style="height: 100px" alt="" />
+      </div>
+      <div class="body_display flex_row">
+        <div class="temp"></div>
+        <div class="place"></div>
+      </div>
+      <div class="footer1 flex">
+        <div class="humidity flex">
+          <img class="img2 humid" src="/images/humidity.png" alt="" />
+          <h3 class="humidity_percentage"></h3>
+        </div>
+        <div class="wind_spd flex">
+          <img class="img2 windy" src="/images/wind.png" alt="" />
+          <h3 class="wind_speed"></h3>
+          <h3>km/h</h3>
+        </div>
+      </div>
+      <div class="footer2 flex">
+        <div>Humidity</div>
+        <div>Wind Speed</div>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
